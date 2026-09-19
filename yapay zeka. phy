@@ -1,0 +1,25 @@
+def basit_yapay_zeka(mesaj):
+    # Girdiyi küçük harfe çevirelim ki eşleşme kolay olsun
+    mesaj = mesaj.lower()
+    
+    if "merhaba" in mesaj or "selam" in mesaj:
+        return "Merhaba! Bugün size nasıl yardımcı olabilirim?"
+    elif "nasılsın" in mesaj:
+        return "Ben bir yazılımım, bu yüzden hep harikayım! Siz nasılsınız?"
+    elif "adın ne" in mesaj:
+        return "Benim adım Python Asistanı."
+    elif "yardım" in mesaj:
+        return "Tabii ki, bana hava durumu, Python kodları veya genel sorular sorabilirsiniz."
+    else:
+        return "Üzgünüm, bunu tam olarak anlayamadım. Farklı bir şey sormak ister misiniz?"
+
+# Konsol üzerinden etkileşim döngüsü
+print("--- Basit Yapay Zeka Asistanına Hoş Geldiniz (Çıkmak için 'çıkış' yazın) ---")
+while True:
+    kullanici_girdisi = input("Siz: ")
+    if "çıkış" in kullanici_girdisi.lower():
+        print("Asistan: Görüşmek üzere! İyi günler dilerim.")
+        break
+    
+    cevap = basit_yapay_zeka(kullanici_girdisi)
+    print(f"Asistan: {cevap}\n")
